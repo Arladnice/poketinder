@@ -4,7 +4,7 @@ import { wrapSuccess } from '../utils';
 
 export const pokemonsRouter = trpc.router().query('get-pokemon', {
   input: z.object({
-    id: z.number()
+    id: z.number(),
   }),
   async resolve({ input }) {
     const pokemon = await fetch(`https://pokeapi.co/api/v2/pokemon/${input.id}/`).then(
