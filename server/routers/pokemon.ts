@@ -1,15 +1,15 @@
 import * as trpc from '@trpc/server';
 import { z } from 'zod';
-import { wrapSuccess } from '../utils';
+import { MAX_POKEMON_COUNTS } from '../constants';
+import { prisma, wrapSuccess } from '../utils';
 
 export const pokemonsRouter = trpc.router().query('get-pokemon', {
   input: z.object({
-    id: z.number(),
+    id: z.number()
   }),
-  async resolve({ input }) {
-    const pokemon = await fetch(`https://pokeapi.co/api/v2/pokemon/${input.id}/`).then(
-      (data) => data.json() as Promise<Pokemon>
-    );
+  async resolve() {
+    const randomId = Math.round(Math.random() * MAX_POKEMON_COUNTS);
+    const pokemon = await prisma.pokemons.findFirst({ where: { id: randomId } });
     return wrapSuccess(pokemon);
   }
 });
