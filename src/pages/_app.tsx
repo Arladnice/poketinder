@@ -40,7 +40,10 @@ export default withTRPC<AppRouter>({
       url,
       queryClientConfig: {
         defaultOptions: {
-          queries: { retry: false, onError: ({ error }) => toast.error(error.message) }
+          queries: {
+            retry: false,
+            onError: (error) => toast.error((error as Error).message)
+          }
         }
       }
     };
