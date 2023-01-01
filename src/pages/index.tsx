@@ -30,19 +30,24 @@ const Home: NextPage = () => {
         <h1 className='text-xl font-bold'>Do you like tme all?</h1>
       </div>
       <div className='flex flex-col gap-4 rounded-lg bg-slate-600 p-4'>
-        <div className='flex justify-between'>
-          <h2 className='text-lg font-medium'>{pokemon.name}</h2>
-          <span>{getPokemonId(pokemon.id)}</span>
-        </div>
-        <div className='flex items-center justify-center'>
-          <Image
-            src={pokemon.image}
-            width={256}
-            height={256}
-            layout='fixed'
-            className='animate-bounce'
-          />
-        </div>
+        <Link href={`/pokemon/${pokemon.id}`}>
+          <div>
+            <div className='flex justify-between'>
+              <h2 className='text-lg font-medium'>{pokemon.name}</h2>
+              <span>{getPokemonId(pokemon.id)}</span>
+            </div>
+            <div className='flex cursor-pointer items-center justify-center'>
+              <Image
+                alt={`pokemon ${pokemon.name}`}
+                src={pokemon.image}
+                width={256}
+                height={256}
+                layout='fixed'
+                className='animate-bounce'
+              />
+            </div>
+          </div>
+        </Link>
 
         <div className='flex gap-3'>
           <Button

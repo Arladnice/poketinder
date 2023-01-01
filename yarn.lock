@@ -364,7 +364,7 @@
   resolved "https://registry.yarnpkg.com/@upstash/ratelimit/-/ratelimit-0.1.5.tgz#345fe6e21c047213564c9abfc125ef92a60834c6"
   integrity sha512-v0zq3Xpq42HQBvXDvm0C4djYvKC5TjHG29uCpbIQcOw0znJNroHewI8y4Yk4tBeEF1rvj2RjDkFihjCp6uTExQ==
 
-"@upstash/redis@^1.13.1":
+"@upstash/redis@^1.18.4":
   version "1.18.4"
   resolved "https://registry.yarnpkg.com/@upstash/redis/-/redis-1.18.4.tgz#524ea6af89b6275d14f2ff9123441b79983c1d1e"
   integrity sha512-dkLV2ANVPqbKEZcqAVgUXFGFHeRnYMB1jtVe2DZPmQ5/9C5EoDmA5x5k9snJNJ1CzLi7YDXkHZ5ps0L9sc707g==
@@ -2340,7 +2340,7 @@ react-ssr-prepass@^1.5.0:
   resolved "https://registry.yarnpkg.com/react-ssr-prepass/-/react-ssr-prepass-1.5.0.tgz#bc4ca7fcb52365e6aea11cc254a3d1bdcbd030c5"
   integrity sha512-yFNHrlVEReVYKsLI5lF05tZoHveA5pGzjFbFJY/3pOqqjGOmMmqx83N4hIjN2n6E1AOa+eQEUxs3CgRnPmT0RQ==
 
-react-toastify@^9.0.8:
+react-toastify@^9.1.1:
   version "9.1.1"
   resolved "https://registry.yarnpkg.com/react-toastify/-/react-toastify-9.1.1.tgz#9280caea4a13dc1739c350d90660a630807bf10b"
   integrity sha512-pkFCla1z3ve045qvjEmn2xOJOy4ZciwRXm1oMPULVkELi5aJdHCN/FHnuqXq8IwGDLB7PPk2/J6uP9D8ejuiRw==

@@ -10,7 +10,18 @@ export const ratingRouter = trpc.router().mutation('rate-pokemon', {
   resolve: async ({ input }) => {
     const updatedPokemon = await prisma.pokemons.update({
       where: { id: input.id },
-      data: { likes: input.rate === 'like' ? { increment: 1 } : { decrement: 1 } }
+      data: {
+        ...(input.rate === 'like' && {
+          likes: {
+            increment: 1
+          }
+        }),
+        ...(input.rate === 'dislike' && {
+          dislikes: {
+            increment: 1
+          }
+        })
+      }
     });
     return wrapSuccess(updatedPokemon);
   }
